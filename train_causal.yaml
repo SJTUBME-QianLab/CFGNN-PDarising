@@ -1,0 +1,55 @@
+exp_name: s1
+split_seed: 1449
+seed: 908
+fold: 0
+
+# hyper-parameters
+pre_epoch: 20
+num_epoch: 100
+LO: 1
+LR: 1
+LG: 0.002
+base_lr: 0.0001
+base_lr_mask: 16
+stepsize: 10
+gamma: 0.5
+scheduler: auto
+
+# data
+data_name: arising.ex202_2_0n0_pw9_r0.4
+patch_size: 9
+
+# feeder
+feeder: tools.feeder.FeederGraph
+train_feeder_args:
+  debug: False
+  save: False
+test_feeder_args:
+  debug: False
+  save: False
+
+# build graph
+graph_args:
+  node_type: px
+  edge_type: abscorr
+  dist_type: euc_1+gau
+  adj_norm: None
+
+# model
+model: net.networks
+model_args:
+  hidden1: [32]
+  kernels: [2]
+  hidden2: [8, 8, 8]
+
+# training
+# device: [0,1,2,3]
+device: [0]
+batch_size: 32
+test_batch_size: 32
+
+#optim
+optimizer: SGD
+weight_decay: 0.0005
+nesterov: True
+
