@@ -2,7 +2,7 @@
 
 This repository holds the code for the paper
 
-**A Causal Counterfactual Graph Neural Network for Arising-from-Chair Abnormality Detection in Parkinsonians **
+**A Causal Counterfactual Graph Neural Network for Arising-from-Chair Abnormality Detection in Parkinsonians**
 
 All the materials released in this library can ONLY be used for RESEARCH purposes and not for commercial use.
 
